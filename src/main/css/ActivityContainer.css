@@ -1,0 +1,15 @@
+.activity-container {
+    height: 100%;
+}
+
+.status-box {
+    /* padding: 0px 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.logs-container {
+    background-color: aliceblue;
+}
