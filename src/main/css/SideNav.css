@@ -10,19 +10,20 @@
     background: lavenderblush;
 }
 .top-box {
-    height: 70px;
-    padding: 0px 10px;
+    height: calc(100vw * 75 / 1200);
+    padding: calc(100vw * 0 / 1200) calc(100vw * 25 / 1200);
     display: grid;
     align-content: center;
-    background: pink;
+    border-bottom: 0.5px solid #73768b;
+    /* background: pink; */
 }
 .gridflexgap20px {
-    padding: 15px 0px;
+    padding: calc(100vw * 25 / 1200) calc(100vw * 0 / 1200);
     display: grid;
     justify-content: center;
-    gap: 20px;
+    gap: calc(100vw * 25 / 1200);
 }
 .icon-30px {
-    height: 30px;
-    width: 30px;
+    height: calc(100vw * 35 / 1200);
+    width: calc(100vw * 35 / 1200);
 }

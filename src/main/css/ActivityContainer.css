@@ -1,5 +1,8 @@
 .activity-container {
     height: 100%;
+    border: 0.5px solid #73768b;
+    border-top: none;
+    width: 100%;
 }
 
 .status-box {
@@ -12,4 +15,42 @@
 
 .logs-container {
     background-color: aliceblue;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+    padding: 0;
+}
+
+btn-su .dropdown-menu {
+    background-color: white;
+    /* border: none; */
+    box-shadow: none;
+    padding: 0;
+}
+
+.btn.show:focus {
+    background: none;
+}
+
+.btn.show {
+    color: green;
+    border: none;
+    background: none;
+}
+
+button:after {
+    background: none;
+}
+
+.btn:hover {
+    color: green;
+    background: none;
+}
+
+.btn:active {
+    background: transparent;
 }

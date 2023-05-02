@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./main/components/Home";
 

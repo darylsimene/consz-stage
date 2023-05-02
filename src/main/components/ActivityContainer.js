@@ -1,8 +1,27 @@
 import React from "react";
+import Dropdown from "react-bootstrap/Dropdown";
 
 import "../css/ActivityContainer.css";
 
 import { BsPersonCircle } from "react-icons/bs";
+
+function StatusDropdown() {
+    return (
+        <Dropdown className="dropdown">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Online
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                <Dropdown.Item>Break</Dropdown.Item>
+                <Dropdown.Item>Lunch Break</Dropdown.Item>
+                <Dropdown.Item>Offline</Dropdown.Item>
+                <Dropdown.Item>Coaching</Dropdown.Item>
+                <Dropdown.Item>Outbound</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+    );
+}
 
 const ActivityContainer = () => {
     return (
@@ -14,7 +33,7 @@ const ActivityContainer = () => {
                         <p className="name-text">John Daryl Simene</p>
                     </div> */}
                     <div className="status-badge">
-                        <p className="status-text">Online</p>
+                        <StatusDropdown />
                         <p className="status-duration">5 minutes</p>
                     </div>
                     <p></p>
