@@ -94,18 +94,36 @@ li:hover {
     transition: opacity 200ms ease-out, transform 200ms ease-out;
 }
 
-.on-break-box {
-    display: grid;
-    align-content: center;
-}
-
-.text-box {
+.status-box-text {
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
 }
 
 .text-box h5 {
     text-align: center;
+}
+
+.outboundcall-btn {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    gap: 8px;
+    height: 32px;
+    background: #6584ff;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(163, 59, 8, 0.08);
+    border-radius: 8px;
 }

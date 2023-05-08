@@ -25,6 +25,11 @@ p {
     font-size: calc(100vw * 14 / 1440);
     line-height: calc(100vw * 14 / 1440);
 }
+h5 {
+    font-family: "Helvetica Neue";
+    font-size: calc(100vw * 18 / 1440) !important;
+    line-height: calc(100vw * 18 / 1440) !important;
+}
 
 button {
     display: flex;
