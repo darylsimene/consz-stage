@@ -6,10 +6,21 @@ const CCP = () => {
     useEffect(() => {
         const instanceURL = 'https://consz.my.connect.aws/ccp-v2/';
         const containerDiv = document.getElementById('container-div');
+        // const URL = `https://localhost:3000/login`
     
         window.connect.core.initCCP(containerDiv, {
           ccpUrl: instanceURL,
           loginPopup: true,
+          // loginUrl: URL,
+          loginOptions: {
+            // username: "johnreycaga-anan",
+            // password: "AmazonConnect!2023",
+            autoClose: true,
+            height: 600,
+            width: 400,
+            top: 0,
+            left: 0,
+          },
           region: 'us-east-1',
           softphone: {
             allowFramedSoftphone: true,
