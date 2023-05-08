@@ -1,56 +1,100 @@
 .activity-container {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     border: 0.5px solid #73768b;
     border-top: none;
     width: 100%;
 }
 
+.activity-container,
+.side-nav {
+    height: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
 .status-box {
-    /* padding: 0px 15px; */
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: center;
     gap: 15px;
+    height: calc(100vw * 70 / 1440);
 }
 
 .logs-container {
     background-color: aliceblue;
 }
 
-.dropdown-toggle {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    color: inherit;
-    padding: 0;
+.status-badge {
+    display: grid;
+    /* gap: 3px; */
 }
 
-btn-su .dropdown-menu {
-    background-color: white;
-    /* border: none; */
-    box-shadow: none;
-    padding: 0;
+.dropdown-container {
+    display: grid;
+    gap: calc(100vw * 70 / 1440);
+    position: relative;
 }
 
-.btn.show:focus {
-    background: none;
+.dropdown-btn {
+    z-index: 1;
 }
 
-.btn.show {
-    color: green;
-    border: none;
-    background: none;
+.dropdown-ul-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    z-index: 2;
+    /* margin-top: calc(100vw * 2 / 1440); */
+    width: calc(100vw * 200 / 1440);
+    padding: calc(100vw * 15 / 1440) 0;
+    background-color: #fff;
+    border-radius: calc(100vw * 4 / 1440);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* opacity: 0; */
+    /* transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out; */
 }
 
-button:after {
-    background: none;
+.dropdown-ul {
+    list-style: none;
 }
 
-.btn:hover {
-    color: green;
-    background: none;
+li {
+    padding: calc(100vw * 15 / 1440) calc(100vw * 15 / 1440);
 }
 
-.btn:active {
-    background: transparent;
+li:hover {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    background-color: #f5f5f5;
+}
+
+.dropdown-enter {
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.dropdown-exit {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.dropdown-exit-active {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.text-box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
