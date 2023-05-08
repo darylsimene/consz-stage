@@ -3,6 +3,7 @@
     flex-direction: column;
     border: 0.5px solid #73768b;
     border-top: none;
+    border-bottom: none;
     width: 100%;
 }
 
@@ -93,8 +94,18 @@ li:hover {
     transition: opacity 200ms ease-out, transform 200ms ease-out;
 }
 
+.on-break-box {
+    display: grid;
+    align-content: center;
+}
+
 .text-box {
     display: grid;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+}
+
+.text-box h5 {
+    text-align: center;
 }
