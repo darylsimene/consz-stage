@@ -1,49 +1,39 @@
-import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-
-import "../css/ActivityContainer.css";
-
+import React, { useContext } from "react";
 import { BsPersonCircle } from "react-icons/bs";
 
-function StatusDropdown() {
-    return (
-        <Dropdown className="dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Online
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-                <Dropdown.Item>Break</Dropdown.Item>
-                <Dropdown.Item>Lunch Break</Dropdown.Item>
-                <Dropdown.Item>Offline</Dropdown.Item>
-                <Dropdown.Item>Coaching</Dropdown.Item>
-                <Dropdown.Item>Outbound</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>
-    );
-}
+import StatusDropdown from "../mini-components/StatusDropdown";
+import "../css/ActivityContainer.css";
+import { AppContext } from "../../App";
 
 const ActivityContainer = () => {
+    const { userStatus, setUserStatus } = useContext(AppContext);
+
     return (
         <div className="activity-container">
-            <div className="status-box top-box">
-                <BsPersonCircle className="icon-30px" />
-                <div className="nameNstatus-box">
-                    {/* <div>
-                        <p className="name-text">John Daryl Simene</p>
-                    </div> */}
-                    <div className="status-badge">
-                        <StatusDropdown />
-                        <p className="status-duration">5 minutes</p>
+            <div className="top-box">
+                <div className="status-box">
+                    <BsPersonCircle className="icon-30px" />
+                    <div className="nameNstatus-box">
+                        <div className="status-badge">
+                            <StatusDropdown />
+                            <p className="status-duration">5 minutes</p>
+                        </div>
                     </div>
-                    <p></p>
                 </div>
             </div>
-            <div className="logs-container">
+            <div className="conversation-box h100per ">
+                <div className="on-break-box h100per ">
+                    <div className="text-box">
+                        <img src="offline.png" alt="You-are-offline" className="img-w300px" />
+                        <h5>You are offline</h5>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="logs-container">
                 <div className="call-logs-container">
                     <div className="contacts-search-container"></div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

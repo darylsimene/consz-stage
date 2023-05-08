@@ -22,5 +22,30 @@ p {
 
 p {
     font-family: "Helvetica Neue";
-    font-size: 14px;
+    font-size: calc(100vw * 14 / 1440);
+    line-height: calc(100vw * 14 / 1440);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    background: none;
+    padding: unset;
+    margin: none;
+}
+
+ul {
+    margin: 0px !important;
+    padding: 0 !important;
+}
+
+.img-w300px {
+    width: 300px;
+}
+
+.h100per {
+    height: 100%;
+    width: 100%;
 }
