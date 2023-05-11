@@ -1,7 +1,7 @@
 .side-nav {
     display: grid;
-    flex-direction: column;
     align-content: space-between;
+    justify-content: center !important;
 }
 
 .topsidenav,

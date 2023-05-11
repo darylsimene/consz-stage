@@ -16,8 +16,7 @@
 
 .status-box {
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    justify-content: space-between;
     gap: 15px;
     height: calc(100vw * 70 / 1440);
 }
@@ -28,7 +27,7 @@
 
 .status-badge {
     display: grid;
-    /* gap: 3px; */
+    gap: calc(100vw * 3 / 1440);
 }
 
 .dropdown-container {
@@ -47,16 +46,12 @@
     left: 0;
     margin: 0;
     z-index: 2;
-    /* margin-top: calc(100vw * 2 / 1440); */
     width: calc(100vw * 200 / 1440);
     padding: calc(100vw * 15 / 1440) 0;
     background-color: #fff;
     border-radius: calc(100vw * 4 / 1440);
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* opacity: 0; */
-    /* transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out; */
 }
 
 .dropdown-ul {
@@ -106,24 +101,103 @@ li:hover {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 25px;
+    gap: calc(100vw * 50 / 1440);
+}
+
+.text-box div {
+    display: grid;
+    gap: calc(100vw * 8 / 1440);
 }
 
 .text-box h5 {
     text-align: center;
 }
 
-.outboundcall-btn {
-    /* Auto layout */
+.q-contacts-cont {
+    display: grid;
+    gap: calc(100vw * 70 / 1440);
+    position: relative;
+}
+
+.dropdown-qContacts-cont {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    z-index: 2;
+    min-width: calc(100vw * 300 / 1440);
+    /*     padding: calc(100vw * 15 / 1440) 0; */
+    background-color: #fff;
+    border-radius: calc(100vw * 4 / 1440);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-qContacts-header {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: calc(100vw * 20 / 1440); */
+    padding: calc(100vw * 0 / 1440) calc(100vw * 10 / 1440);
+    border-bottom: 0.5px solid var(--neutral60);
+}
+
+.header-icon-cont {
+    padding: calc(100vw * 8 / 1440) calc(100vw * 10 / 1440);
+}
+
+.active-icon {
+    border-bottom: 4px solid var(--blue);
+}
+
+.qContacts-wrapper {
+    display: grid;
+    gap: calc(100vw * 20 / 1440);
+    padding: calc(100vw * 15 / 1440) calc(100vw * 15 / 1440);
+}
+
+.input-wrapper {
+    border: 1px solid var(--neutral60);
+    box-shadow: 0px 2px 2px rgba(33, 37, 41, 0.06), 0px 0px 1px rgba(33, 37, 41, 0.08);
+    border-radius: calc(100vw * 8 / 1440);
+    padding: calc(100vw * 5 / 1440);
+}
+
+.input-cont {
+    display: flex;
+    gap: calc(100vw * 10 / 1440);
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ============ NUMPAD CONTAINER =============*/
+.controls-cont {
+    display: flex;
+    gap: calc(100vw * 5 / 1440);
+}
+
+.numpad-wrapper {
+    display: grid;
+    flex-wrap: wrap;
+    gap: calc(100vw * 15 / 1440);
+}
+
+.numpad-container {
+    display: grid;
+    gap: calc(100vw * 15 / 1440);
+    padding: 0px calc(100vw * 20 / 1440);
+}
+
+.numpad-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numpad-row button {
     justify-content: center;
     align-items: center;
-    padding: 0px 15px;
-    gap: 8px;
-    height: 32px;
-    background: #6584ff;
-    color: white;
-    box-shadow: 0px 4px 8px rgba(163, 59, 8, 0.08);
-    border-radius: 8px;
+    padding: calc(100vw * 10 / 1440) calc(100vw * 20 / 1440);
+    border: 1px solid var(--blue);
+    font-size: calc(100vw * 16 / 1440);
+    font-weight: bold;
+    border-radius: calc(100vw * 8 / 1440);
 }

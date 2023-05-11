@@ -7,7 +7,6 @@ import { MdOutlineExpandMore, MdOutlineExpandLess } from "react-icons/md";
 const StatusDropdown = () => {
     const { userStatus, setUserStatus } = useContext(AppContext);
     const [statusList, setStatusList] = useState(false);
-    // Define a state variable for the user's status
 
     // Define a function to handle selecting a new user status
     const handleSelectStatus = (newStatus) => {
@@ -26,7 +25,7 @@ const StatusDropdown = () => {
             <button className="dropdown-btn" onClick={() => setStatusList(!statusList)}>
                 {userStatus === "" && setUserStatus("Online")}
                 <p>{userStatus}</p>
-                {statusList ? <MdOutlineExpandLess /> : <MdOutlineExpandMore />}
+                {statusList ? <MdOutlineExpandLess className="icon-15px" /> : <MdOutlineExpandMore className="icon-15px" />}
             </button>
 
             <CSSTransition

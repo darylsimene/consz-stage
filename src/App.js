@@ -3,16 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./main/components/Home";
-// import AwsConnectLogin from "./main/components/AwsConnectLogin";
 
 export const AppContext = createContext();
 
 function App() {
     const [userStatus, setUserStatus] = useState("");
+    const [isCalling, setIsCalling] = useState("");
 
     return (
         <div className="App">
-            <AppContext.Provider value={{ userStatus, setUserStatus }}>
+            <AppContext.Provider value={{ userStatus, setUserStatus, isCalling, setIsCalling }}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     {/* <Route path="/aws-connect" element={<AwsConnectLogin />} /> */}
